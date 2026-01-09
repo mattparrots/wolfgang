@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wolfgang - Clean, distraction-free recipe viewer">
+    <meta name="theme-color" content="#2c3e50">
+    <title>Wolfgang - Recipe Declutterer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="icon-192.png">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>🍳 Wolfgang</h1>
+            <nav>
+                <button id="home-btn" class="nav-btn active">Home</button>
+                <button id="recipes-btn" class="nav-btn">Recipes</button>
+                <button id="shopping-btn" class="nav-btn">Shopping List</button>
+                <button id="settings-btn" class="nav-btn">Settings</button>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Home View -->
+            <section id="home-view" class="view active">
+                <div class="hero">
+                    <h2>Clean Recipes, No Fluff</h2>
+                    <p>Paste a recipe URL to extract just what you need</p>
+                </div>
+
+                <div class="input-group">
+                    <input type="url" id="recipe-url" placeholder="https://example.com/recipe" />
+                    <button id="fetch-btn">Fetch Recipe</button>
+                </div>
+
+                <div id="loading" class="hidden">
+                    <div class="spinner"></div>
+                    <p>Fetching recipe...</p>
+                </div>
+
+                <div id="error" class="error hidden"></div>
+            </section>
+
+            <!-- Recipe List View -->
+            <section id="recipes-view" class="view">
+                <div class="view-header">
+                    <h2>Saved Recipes</h2>
+                    <button id="export-recipes-btn" class="secondary-btn">Export All</button>
+                </div>
+                <div id="recipe-list"></div>
+            </section>
+
+            <!-- Recipe Detail View -->
+            <section id="recipe-detail-view" class="view">
+                <button id="back-btn" class="back-btn">← Back</button>
+                <article id="recipe-detail"></article>
+            </section>
+
+            <!-- Shopping List View -->
+            <section id="shopping-view" class="view">
+                <div class="view-header">
+                    <h2>Shopping List</h2>
+                    <div>
+                        <button id="clear-shopping-btn" class="secondary-btn">Clear</button>
+                        <button id="export-shopping-btn" class="primary-btn">Export</button>
+                    </div>
+                </div>
+                <div id="shopping-list"></div>
+            </section>
+
+            <!-- Settings View -->
+            <section id="settings-view" class="view">
+                <h2>Settings</h2>
+
+                <div class="setting-group">
+                    <h3>Data Management</h3>
+                    <button id="import-recipes-btn" class="secondary-btn">Import Recipes</button>
+                    <input type="file" id="import-file" accept=".json" class="hidden" />
+                    <button id="clear-all-btn" class="danger-btn">Clear All Data</button>
+                </div>
+
+                <div class="setting-group">
+                    <h3>About</h3>
+                    <p>Wolfgang v1.0 - A simple recipe declutterer</p>
+                    <p>Works offline • No tracking • Open source</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js" type="module"></script>
+</body>
+</html>

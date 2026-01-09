@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Optional: Uncomment if you want to ignore the generated icons
+# icon-192.png
+# icon-512.png
