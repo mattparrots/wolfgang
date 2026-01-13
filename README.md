@@ -68,7 +68,7 @@ Wolfgang works with any site that uses Schema.org JSON-LD markup, including:
 2. Set the source to the main branch / root directory
 3. Generate and commit the icon files (see step 2 above)
 4. Push to GitHub
-5. Access your app at `https://yourusername.github.io/wolfgang`
+5. Access your app at `https://mattparrots.github.io/wolfgang`
 
 ## Usage
 
